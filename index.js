@@ -192,7 +192,7 @@ function throttledRequest(client, options, operation, params){
                     } else {
                         var customError = new Error();
                         customError.message = test.errMessage;
-                        reject(new Error(customError))
+                        reject(customError);
                     }
                 }).catch(reject);
             })
